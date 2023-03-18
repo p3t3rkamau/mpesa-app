@@ -8,9 +8,9 @@
   ],
   "routes": [
     {
-      "src": "/callback.php",
+      "src": "/stk_initiate.php",
       "methods": ["POST"],
-      "dest": "callback.php"
+      "dest": "stk_initiate.php"
     },
     {
       "src": "/.*",
