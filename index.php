@@ -43,6 +43,7 @@ if(isset($_POST['submit'])){
 
   # callback url
   $CallBackURL = 'https://petercubolt.000webhostapp.com/callback_url.php';  
+ 
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -84,8 +85,10 @@ if(isset($_POST['submit'])){
   curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
   $curl_response = curl_exec($curl);
   print_r($curl_response);
+  $response_array = json_decode($curl_response, true);
+  $formatted_response = json_encode($response_array, JSON_PRETTY_PRINT);
 
-  echo $curl_response;
+  echo $formatted_response;
 };
 ?>
 <!DOCTYPE html>
