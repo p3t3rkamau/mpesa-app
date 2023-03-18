@@ -88,7 +88,7 @@ if(isset($_POST['submit'])){
   $response_array = json_decode($curl_response, true);
   $formatted_response = json_encode($response_array, JSON_PRETTY_PRINT);
 
-  echo $formatted_response;
+  echo "<script>alert('$formatted_response');</script>";
 };
 ?>
 <!DOCTYPE html>
