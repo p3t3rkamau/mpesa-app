@@ -8,6 +8,4 @@
   ],
   "env": {
     "ENVIRONMENT_VARIABLE": "value"
-  },
-  "output": "public"
-}
+  }
